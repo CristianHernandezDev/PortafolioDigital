@@ -3,22 +3,6 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 420px) {
-
-  section {
-    padding: 1.5rem 0.5rem;
-  }
-
-  .card {
-    padding: 1rem;
-    font-size: 0.95rem;
-  }
-}
-
-
-
-
-
 /*Pagina en PC*/
 html {
   scroll-behavior: smooth;
@@ -34,23 +18,23 @@ header {
 }
 header p {
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;   /* más delgado */
+  font-weight: 300;
   font-size: 1.5rem;
   color: #f4f4f4;
 }
 
 .header-container {
-  display: flex;              /* coloca elementos en fila */
+  display: flex;
   align-items: center; 
-  justify-content: center;       /* centra verticalmente */
-  gap: 2rem;                  /* espacio entre imagen y texto */
+  justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 .header-img {
-  width: 200px;                /* tamaño de la foto */
+  width: 200px;
   height: 200px;
-  border-radius: 30%;         /* opcional: redondear la imagen */
+  border-radius: 30%;
 }
 
 /*Contenedor de botones*/
@@ -77,8 +61,10 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin: 0;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0 auto;
+  width: 100%;
 }
 /**/
 nav a {
@@ -114,7 +100,7 @@ body {
 
 h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
   font-weight: 700;
   color: #f4f4f4;
   letter-spacing: 1px; /* da un aire más elegante */
@@ -123,20 +109,20 @@ h1 {
 
 h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem; /* subtítulos */ 
+  font-size: clamp(1.4rem, 4.5vw, 1.8rem); /* subtítulos */ 
   font-weight: 600; 
 }
 
 h3 {
   font-family: 'Rubik', sans-serif;
-  font-size: 1.2rem; /* secciones pequeñas */ 
+  font-size: clamp(1.2rem, 3.5vw, 1.2rem);/* secciones pequeñas */ 
   font-weight:500; 
 }
 
 p {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;   /* más delgado */
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
   color: #222;
 }
 
@@ -153,23 +139,20 @@ section {
 
 .justificado {
   text-align: justify;
-  padding-right: 2.5rem;
+  padding: 1rem;
 }
 
 .columna-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  max-width: 90%;
   margin: 0 auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .columna {
   background-color: #ffffff; /* opcional */
   border-radius: 10px;
-  padding: 2rem 2rem;
+  padding: 2rem 1rem;
   box-shadow: 0 4px 8px #00000033;
 }
 .card-container {
@@ -292,14 +275,13 @@ section {
 }
 
 .nombre {
-  font-weight: bold;
   font-family: 'Rubik', sans-serif;
   color: #333;
 }
 
 .estrellas {
-  font-size: 1.2rem;
-  color: #f5b301; /* dorado para estrellas */
+  font-size: clamp(1.4rem, 6vw, 2.2rem);
+  color: #f5b301;
   padding-left: 0.8rem;
 }
 
@@ -312,6 +294,7 @@ section {
 /**Carrousel de imagenes**/
 #galeriaCertificados {
   text-align: center;
+  justify-content: center;
 }
 
 .certificados {
@@ -397,7 +380,7 @@ section {
 }
 
 .contact-item {
-  font-size: 1rem;
+  font-size: clamp(1rem, 6vw, 1rem);
   padding: 0.5rem 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
