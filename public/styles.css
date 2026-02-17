@@ -45,6 +45,38 @@ header p {
   transition: all 0.3s ease;
   justify-content: center;
   align-items: center;
+  display: flex;
+}
+
+/* Botón hamburguesa oculto en escritorio */
+.menu-hamburguesa {
+  display: none;
+  font-size: 2rem;
+  border: none;
+  color: #fff;
+  background:#222 ;
+  cursor: pointer;
+}
+
+/* En móviles: ocultar menú normal */
+@media (max-width: 695px) {
+  #menu {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+  .menu-hamburguesa {
+    display: block;
+  }
+  #menu.show {
+    display: flex; /* se mostrará cuando se active */
+  }
+  #menu ul {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
 }
 
 /*Sombra de contenedor de botones*/
@@ -343,6 +375,12 @@ section {
   max-width: 100%;
   max-height: 90%;
   border-radius: 15px;
+}
+@media (max-width: 695px){
+  .lightbox img {
+    max-width: 80%;
+    max-height: 70%;
+  }
 }
 
 .lightbox span {
