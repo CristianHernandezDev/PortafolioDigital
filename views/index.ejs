@@ -15,6 +15,8 @@
   
   <script src="/certificados.js" defer></script>
   <script src="/menuEscritorio.js" defer></script>
+  <script src="/seleccionSeccion.js" defer></script>
+  <script src="/menuMovil.js" defer></script>
 
 
 </head>
@@ -32,7 +34,18 @@
 
   </header>
 
-
+<!-- Menú móvil -->
+  <div class="nav-container">
+    <button class="menu-toggle">☰</button>
+    <nav id="menu-movil">
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#galeriaCertificados">Certificados</a></li>
+      </ul>
+    </nav>
+  </div>
 
 
   <nav id="menu">
@@ -79,7 +92,7 @@
             </p> 
             <div class="button-container">
               <a href="https://www.figma.com/proto/CuPGwjxAiGeY91CVdgTmKh/El-equipo-de-Cristian-Gustavo-Hern%C3%A1ndez-Cruz-team-library?node-id=3311-538&p=f&t=HooVkwgm7w70fdrE-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3311%3A538" target="_blank" class="card-button">Ver prototipo</a> 
-              <a href="https://drive.google.com/drive/folders/1e9bKcxlRPccMkV9orolc82R35X0Dk09t?usp=sharing" class="card-button">Ver documentación</a>
+              <a href="https://drive.google.com/drive/folders/1e9bKcxlRPccMkV9orolc82R35X0Dk09t?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-button">Ver documentación</a>
               <a href="https://github.com/CristianHernandezDev/PortafolioDigital.git" target="_blank" rel="noopener noreferrer" class="card-button">Ver repositorio</a> 
             </div>
           </div>
@@ -270,24 +283,6 @@
 
     
   </main>
-
-
-<script >
-  const toggle = document.querySelector('.menu-hamburguesa');
-  const links = document.querySelectorAll('#menu a');
-
-  // Abrir/cerrar menú al pulsar el botón
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
-
-  // Cerrar menú al seleccionar un enlace
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-     menu.classList.remove('show');
-    });
-  });
-</script>
 
 </body>
 </html>

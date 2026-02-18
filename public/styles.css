@@ -48,14 +48,48 @@ header p {
   display: flex;
 }
 
-/* Botón hamburguesa oculto en escritorio */
-.menu-hamburguesa {
+/* Contenedor del botón y menú */
+.nav-container {
+  display: none;              /* activa flexbox */
+  align-items: center;        /* alinea verticalmente */
+  position: sticky;            /* se queda arriba */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  padding: 1rem;
+  z-index: 2000;
+}
+
+/* Menú móvil oculto por defecto */
+.menu-toggle {
   display: none;
-  font-size: 2rem;
+  top: 0;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: #222;
   border: none;
   color: #fff;
-  background:#222 ;
-  cursor: pointer;
+  position: sticky;
+  z-index: 2100;
+}
+
+#menu-movil {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap:0;
+  padding: 0.5rem 1rem;
+  background: #222;
+  top: 0;
+  font-size: 1rem;
+  position: sticky;
+  z-index: 2000;
+}
+
+#menu-movil ul {
+  display: none;
+  gap: 2rem;
 }
 
 /* En móviles: ocultar menú normal */
@@ -66,17 +100,18 @@ header p {
   nav {
     display: none;
   }
-  .menu-hamburguesa {
-    display: block;
+  .menu-toggle {
+    display: block; /* muestra botón hamburguesa */
   }
-  #menu.show {
-    display: flex; /* se mostrará cuando se active */
+  #menu-movil.show {
+    display: flex; /* se activa con JS */
   }
-  #menu ul {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
+  .nav-container {
+    display: flex;
   }
+  #menu-movil ul {
+  display: flex;
+}
 }
 
 /*Sombra de contenedor de botones*/
